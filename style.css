@@ -1,0 +1,35 @@
+h1, h2{
+    text-align: center;
+}
+
+img, select, input{
+    display: block;
+    margin: auto;
+}
+
+p{
+    text-align: center;
+}
+
+div #es{
+    text-align: center;
+}
+
+div #eras{
+    text-align: center;
+}
+
+div #eras #btn-styled{
+    background-color: yellow;
+}
+
+img{
+
+  
+}
+
+div #es{
+    display: none;
+    
+}
+
