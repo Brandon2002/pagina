@@ -15,7 +15,7 @@ div #es{
     text-align: center;
 }
 
-div #eras{
+div #eras, #des{
     text-align: center;
 }
 
@@ -23,13 +23,9 @@ div #eras #btn-styled{
     background-color: yellow;
 }
 
-img{
-
-  
-}
-
 div #es{
     display: none;
-    
 }
+
+
 

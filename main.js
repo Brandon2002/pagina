@@ -5,11 +5,12 @@ function verificadorEra(){
     }else{
         let div = document.getElementById("e")
         div.innerText = "" + era.value
-        console.log(era.value);
-        document.getElementById("es").style.display="block"
         
+        document.getElementById("es").style.display="block"
+        document.getElementById("photo").style.display="block"
+
     }
-   
+
     if(era.value == 19){
         era19();
         alert("¡Regresemos a la era 19!")
@@ -34,21 +35,21 @@ function verificadorEra(){
 }
 
 function era19(){
-    let div = document.getElementById("eras")
-        div.innerText = "Álbum debut de Adele" 
+    let div = document.getElementById("des")
+        div.innerText = "Álbum debut de Adele"
     let fr = document.getElementById("frase")
         fr.innerText = "Should I give up, or should I just keep chasing pavements?"
-        
+
     document.getElementById("img").src="https://cutt.ly/QL1FMiR";
     let bo = document.getElementById("e")
         bo.style.color="#D5951C"
-    
+
 }
 
 function era21(){
-    let div = document.getElementById("eras")
+    let div = document.getElementById("des")
         div.innerText = "Segundo álbum de Adele, un éxito en ventas"
-       
+
     let fr = document.getElementById("frase")
         fr.innerText = "We could've had it all, rolling in the deep"
     document.getElementById("img").src="https://cutt.ly/CL1FnBv";
@@ -57,7 +58,7 @@ function era21(){
 }
 
 function era25(){
-    let div = document.getElementById("eras")
+    let div = document.getElementById("des")
         div.innerText = "Tercer álbum de Adele, un éxito en ventas"
     let fr = document.getElementById("frase")
         fr.innerText = "Hello from the other side"
@@ -67,7 +68,7 @@ function era25(){
 }
 
 function era30(){
-    let div = document.getElementById("eras")
+    let div = document.getElementById("des")
         div.innerText = "Cuarto álbum de Adele, un éxito en ventas a pesar de la era del streaming"
     let fr = document.getElementById("frase")
         fr.innerText = "Go easy on me, baby"
@@ -89,31 +90,153 @@ function era30(){
 //     }
 
 function verificadorA(){
-    
+
     let era = document.getElementById("era")
     if(era.value == 19){
-        console.log("Esto será para la era 19")
+        
         document.getElementById("btn2").disabled=true;
         document.getElementById("era").disabled=false;
-    } 
+        nueva19();
+    }
     if(era.value == 21){
         console.log("Esto será para la era 21")
         document.getElementById("btn2").disabled=true;
         document.getElementById("era").disabled=false;
-    } 
+        nueva21();
+
+    }
     if(era.value == 25){
         console.log("Esto será para la era 25")
         document.getElementById("btn2").disabled=true;
         document.getElementById("era").disabled=false;
+        nueva25();
     }
     if(era.value ==30){
         console.log("Esto será para la era 30")
         document.getElementById("btn2").disabled=true;
         document.getElementById("era").disabled=false;
+        nueva30();
     }
 }
 
+function nueva19(){
+    let songs = [
+        {'song': 'Daydreamer'},
+        {'song': 'Chasing Pavements'},
+        {'song': 'Crazy for You'},
+        {'song': 'First Love'},
+        {'song': 'Make You Feel My Love'},
+        {'song': 'Tired'},
+        {'song': 'Best For Last'},
+        {'song': 'Cold Shoulder'},
+        {'song': 'Melt My Heart To Stone'},
+        {'song': 'Right as Rain'},
+        {'song': 'My Same'},
+        {'song': 'Hometown Glory'},
+    ];
 
+
+    let fraseAle = Math.round(Math.random() *12)
+    let html = "<p>Tu canción de 19 es " + songs[fraseAle].song +  "</p>"
+    document.getElementById("eras").innerHTML=html;
+
+    imgAle19();
+}
+
+function nueva21(){
+    let songs = [
+        {'song': 'Rolling In the Deep'},
+        {'song': 'Take It All'},
+        {'song': 'Don`t you Remember'},
+        {'song': 'Someone Like You'},
+        {'song': 'Turning Tables'},
+        {'song': 'He Won`t Go'},
+        {'song': 'Set Fire To The Rain'},
+        {'song': 'I`ll Be Waiting'},
+        {'song': 'Love Song'},
+        {'song': 'Rumour Has It'},
+        {'song': 'One and Only'},
+    ];
+
+
+    let fraseAle = Math.round(Math.random() *11)
+    // let imagenAle = Math.round(Math.random() *3)
+    let html = "<p>Tu canción de 21 es " + songs[fraseAle].song +  "</p>"
+    document.getElementById("eras").innerHTML=html
+    // document.getElementById("img2").src="imagenes19"
+   
+}
+
+function nueva25(){
+    let songs = [
+        {'song': 'Hello'},
+        {'song': 'Send My Love(To Your New Lover)'},
+        {'song': 'I Miss You'},
+        {'song': 'Sweetest Devotion'},
+        {'song': 'When We Were Young'},
+        {'song': 'Water Under The Bridge'},
+        {'song': 'All I Ask'},
+        {'song': 'Love In The Dark'},
+        {'song': 'Remedy'},
+        {'song': 'River Lea'},
+        {'song': 'Million Years Ago'},
+    ];
+
+
+    let fraseAle = Math.round(Math.random() *11)
+    // let imagenAle = Math.round(Math.random() *3)
+    let html = "<p>Tu canción de 25 es " + songs[fraseAle].song +  "</p>"
+    document.getElementById("eras").innerHTML=html
+    // document.getElementById("img2").src="imagenes19"
+    
+}
+
+function nueva30(){
+    let songs = [
+        {'song': 'Easy On Me'},
+        {'song': 'Strangers By Nature'},
+        {'song': 'Oh My God'},
+        {'song': 'Can I Get It'},
+        {'song': 'Cry Your Heart Out'},
+        {'song': 'I Drink Wine'},
+        {'song': 'Hold On'},
+        {'song': 'Woman Like Me'},
+        {'song': 'Love Is A Game'},
+        {'song': 'All Nigth Parking'},
+        {'song': 'To Be Loved'},
+    ];
+
+
+    let fraseAle = Math.round(Math.random() *11)
+    // let imagenAle = Math.round(Math.random() *3)
+    let html = "<p>Tu canción de 30 es " + songs[fraseAle].song +  "</p>"
+    document.getElementById("eras").innerHTML=html
+    // document.getElementById("img2").src="imagenes19"
+    
+}
+
+function imgAle19(){
+    let imgArray = [
+        'a1.jpeg', 'a2.jpeg',
+        'a3.jpeg', 'a4.jpeg',
+        'a5.jpeg', 'a6.jpeg',
+        'a7.jpeg', 'a8.jpeg',
+        'a9.jpeg', 'a10.jpeg',
+        'a11.jpeg','a12.jpeg',
+        'a13.jpeg','a14.jpeg',
+        'a15.jpeg','a16.jpeg',
+        'a17.jpeg','a18.jpeg',
+        'a19.jpeg','a20.jpeg'
+    ];
+
+    let randomIndex = Math.floor(Math.random()*imgArray.length)
+    console.log(randomIndex)
+
+    let selectedImg = imgArray[randomIndex]
+
+    document.getElementById("img1").src = `./imagenes19/${selectedImg}`
+
+}
 
 
 
@@ -124,5 +247,5 @@ function verificadorA(){
 //         button.id = 'btn-styled'
 //     let div1 = document.getElementById('es');
 //         div1.appendChild(button)
-        
+
 // }
