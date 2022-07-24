@@ -32,6 +32,10 @@ function verificadorEra(){
         document.getElementById("btn2").disabled=false;
         document.getElementById("era").disabled=true;
     }
+
+    if(era.value == 19 || era.value == 21 || era.value ==25 || era.value ==30){
+        document.getElementById("eras").innerText="Ahora presiona el botón para obtenerlo"
+    }
 }
 
 function era19(){
@@ -43,6 +47,10 @@ function era19(){
     document.getElementById("img").src="https://cutt.ly/QL1FMiR";
     let bo = document.getElementById("e")
         bo.style.color="#D5951C"
+    let bc = document.getElementById("btn1")
+        bc.style.backgroundColor="#D5951C"
+    let bt = document.getElementById("e")
+        bt.style.fontFamily="'Edu TAS Beginner', cursive"
 
 }
 
@@ -55,6 +63,10 @@ function era21(){
     document.getElementById("img").src="https://cutt.ly/CL1FnBv";
     let bo = document.getElementById("e")
         bo.style.color="#81BD00"
+    let bc = document.getElementById("btn1")
+        bc.style.backgroundColor="#81BD00"
+    let bt = document.getElementById("e")
+        bt.style.fontFamily="'Barlow', sans-serif"
 }
 
 function era25(){
@@ -65,6 +77,10 @@ function era25(){
     document.getElementById("img").src="https://cutt.ly/JL1FOmi";
     let bo = document.getElementById("e")
         bo.style.color="#BC0000"
+    let bc = document.getElementById("btn1")
+        bc.style.backgroundColor="#BC0000"
+    let bt = document.getElementById("e")
+        bt.style.fontFamily="'Teko', sans-serif"
 }
 
 function era30(){
@@ -75,6 +91,10 @@ function era30(){
     document.getElementById("img").src="https://cutt.ly/6L1FJID";
     let bo = document.getElementById("e")
         bo.style.color="#B2A200"
+    let bc = document.getElementById("btn1")
+        bc.style.backgroundColor="#B2A200"
+    let bt = document.getElementById("e")
+        bt.style.fontFamily="'Didact Gothic', sans-serif"
 }
 
 // function cambioId(){
@@ -157,7 +177,7 @@ function nueva21(){
         {'song': 'Rumour Has It'},
         {'song': 'One and Only'},
     ];
-
+    imgAle21()
 
     let fraseAle = Math.round(Math.random() *11)
     // let imagenAle = Math.round(Math.random() *3)
@@ -181,7 +201,7 @@ function nueva25(){
         {'song': 'River Lea'},
         {'song': 'Million Years Ago'},
     ];
-
+    imgAle25();
 
     let fraseAle = Math.round(Math.random() *11)
     // let imagenAle = Math.round(Math.random() *3)
@@ -205,7 +225,7 @@ function nueva30(){
         {'song': 'All Nigth Parking'},
         {'song': 'To Be Loved'},
     ];
-
+    imgAle30();
 
     let fraseAle = Math.round(Math.random() *11)
     // let imagenAle = Math.round(Math.random() *3)
@@ -235,6 +255,76 @@ function imgAle19(){
     let selectedImg = imgArray[randomIndex]
 
     document.getElementById("img1").src = `./imagenes19/${selectedImg}`
+    document.getElementById("img1").style.width="150px"
+
+}
+
+function imgAle21(){
+    let imgArray = [
+        'a1.jpeg', 'a2.jpeg',
+        'a3.jpeg', 'a4.jpeg',
+        'a5.jpeg', 'a6.jpeg',
+        'a7.jpeg', 'a8.jpeg',
+        'a9.jpeg', 'a10.jpeg',
+        'a11.jpeg','a12.jpeg',
+        'a13.jpeg','a14.jpeg',
+        'a15.jpeg','a16.jpeg',
+        'a17.jpeg','a18.jpeg',
+        'a19.jpeg','a20.jpeg'
+    ];
+
+    let randomIndex = Math.floor(Math.random()*imgArray.length)
+    console.log(randomIndex)
+
+    let selectedImg = imgArray[randomIndex]
+
+    document.getElementById("img1").src = `./imagenes21/${selectedImg}`
+
+}
+
+function imgAle25(){
+    let imgArray = [
+        'a1.jpeg', 'a2.jpeg',
+        'a3.jpeg', 'a4.jpeg',
+        'a5.jpeg', 'a6.jpeg',
+        'a7.jpeg', 'a8.jpeg',
+        'a9.jpeg', 'a10.jpeg',
+        'a11.jpeg','a12.jpeg',
+        'a13.jpeg','a14.jpeg',
+        'a15.jpeg','a16.jpeg',
+        'a17.jpeg','a18.jpeg',
+        'a19.jpeg','a20.jpeg'
+    ];
+
+    let randomIndex = Math.floor(Math.random()*imgArray.length)
+    console.log(randomIndex)
+
+    let selectedImg = imgArray[randomIndex]
+
+    document.getElementById("img1").src = `./imagenes25/${selectedImg}`
+
+}
+
+function imgAle30(){
+    let imgArray = [
+        'a1.jpeg', 'a2.jpeg',
+        'a3.jpeg', 'a4.jpeg',
+        'a5.jpeg', 'a6.jpeg',
+        'a7.jpeg', 'a8.jpeg',
+        'a9.jpeg', 'a10.jpeg',
+        'a11.jpeg','a12.jpeg',
+        'a13.jpeg','a14.jpeg',
+        'a15.jpeg','a16.jpeg',
+        'a17.jpeg','a18.jpeg',
+        'a19.jpeg','a20.jpeg'
+    ];
+
+    let randomIndex = Math.floor(Math.random()*imgArray.length)
+    console.log(randomIndex)
+
+    let selectedImg = imgArray[randomIndex]
+
+    document.getElementById("img1").src = `./imagenes30/${selectedImg}`
 
 }
 
